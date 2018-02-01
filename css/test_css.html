@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+     background-color: lightblue;	
+}
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;} 
+#txt{
+	text-transform: uppercase;
+}
+table{
+   border: 1px solid black;
+}
+#example1 {
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#example2 {
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 50px 20px;
+}
+</style>
+</head>
+<body>
+	<h1>
+		Hello World!
+	</h1>
+	<p class="double">
+		This page has a light blue background color!
+	</p>
+	<p id = "txt">
+		asdfasfasdf
+	</p>
+	<table border="5">
+		<tr>a</tr>
+		<tr>s</tr>
+	</table>
+	<h2>border-radius: 25px:</h2>
+<div id="example1">
+<p>Border radius 25px;</p>
+</div>
+
+<h2>border-radius: 50px 20px:</h2>
+<div id="example2">
+<p>border radius 50px</p>
+</div>
+</body>
+</html>
