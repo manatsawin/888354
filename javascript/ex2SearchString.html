@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <body>
+       <script>
+          function myFunction() {
+            var x = 0;
+            var search = document.getElementById("search").value
+            var text = document.getElementById("area").value;
+              if(document.getElementById("y").checked){
+                var spilt = text.split(" ");
+               // document.getElementById("").innerHTML = textspilt;
+                  for( var i=0; i<spilt.length; i++ ){
+                    if(spilt[i]== search){
+                      x++;
+                    }//console.log(x);
+                  }
+                    document.getElementById("tagp").innerHTML = x;
+              } 
+              else{
+                document.getElementById("tagp").innerHTML = "shits";
+                var new_text = text.toLowerCase();
+                var new_search = search.toLowerCase();
+                alert(new_text);
+                alert(new_search);
+                var new_spilt = new_text.split(" ");
+                   for(var i = 0;i< new_spilt.length; i++){
+                      if(new_spilt[i] = new_search){
+                        x++;
+                      }
+                    }
+                    document.getElementById("tagp").innerHTML = x;
+              }
+            }
+          
+      </script>
+    <center><br>
+      <div id="txt">Text input : 
+        <textarea id="area"></textarea>
+      </div><br>
+      <div id="input_search">Search : 
+        <input type="text" id="search">
+      </div><br>
+      <div>
+        <input id = "y" type="radio" name="gender" value="male">Yes<br>
+        <input id = "n" type="radio" name="gender" value="female">No<br></div>
+      <button  type="button" onclick="myFunction()">search</button>
+      <p id="tagp"></p>
+    </center>
+  </body>
+</html>
