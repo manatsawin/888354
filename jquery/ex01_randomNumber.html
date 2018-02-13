@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#H{
+			text-align: center;
+			color: blue;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(function(){
+		var result_all = 0;
+		var num1 = 0;
+		var num2 = 0;
+		var answer = 0;
+   		$("#random").click(function(){
+   			var result = 0;
+   			num1 = Math.floor(Math.random() * 999) +1;
+   			num2 = Math.floor(Math.random() * 999) +1;
+		    	$("#show_result1").html(num1+" + "+num2 +" : ");
+		        var result_all = num1 + num2;
+		        //console.log(result_all);
+		});
+		$("#answer1").click(function(){
+			 var result_all = num1 + num2;
+			//alert(result_all);
+		   		answer = $("#ramdom_num").val();
+		        if(result_all == answer){
+					$("#ans1").html("<span style='color:green;'>Correct!!!</span>");	
+				}else{
+					$("#ans1").html("<span style='color:red;'>Not Correct plesae try again later!! </span> the real result is :" + result_all);
+		        }
+		});
+	});
+</script>	
+<center>
+	<h1 id = "H">Ex - Random Number for Answer</h1><hr>
+	<button type="button" id="random" >Random Number</button><br><br>
+		<span id="show_result1"></span>
+		<input type="text" id="ramdom_num"><br><br>
+		<button type="button" id="answer1" >Check Result</button>
+		<br><br>
+		<span id="ans1"></span>
+
+</center>		
